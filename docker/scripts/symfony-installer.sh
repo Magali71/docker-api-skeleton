@@ -44,8 +44,6 @@ if [ ! -f composer.json ]; then
     composer require "php:>=$PHP_VERSION"
     composer config --json extra.symfony.docker 'false'
     composer config --json extra.symfony.allow-contrib 'true'
-    composer config repositories.infolegale-base-bundle '{"type": "composer", "url": "https://gitlab.infolegale.net/api/v4/group/135/-/packages/composer/packages.json"}'
-    composer require infolegale/base-bundle
     composer require --dev phpstan/phpstan-symfony squizlabs/php_codesniffer php-parallel-lint/php-parallel-lint
     cp -Rp . ..
     cd -
